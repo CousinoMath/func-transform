@@ -1,0 +1,22 @@
+{
+  "name": "func-transform",
+  "version": "0.0.0",
+  "description": "A page illustrating function transformations",
+  "browser": "./dist/index.html",
+  "repository": "https://github.com/CousinoMath/func-transform.git",
+  "author": "Andrew Cousino <cousinomath@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "css": "compass compile"
+  },
+  "dependencies": {
+    "jsxgraph": "^0.99.7"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
+  }
+}
