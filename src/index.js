@@ -1,10 +1,10 @@
-const board = JXG.JSXGraph.initBoard('jxgbox', { boundingbox: [-5, 5, 5, -5], axis: true });
-const a = board.create('slider', [[1, 4], [4, 4], [-5, 1, 5]], { name: 'a' });
-const b = board.create('slider', [[1, 3], [4, 3], [-5, 1, 5]], { name: 'b' });
-const c = board.create('slider', [[1, 2], [4, 2], [-5, 0, 5]], { name: 'c' });
-const d = board.create('slider', [[1, 1], [4, 1], [-5, 0, 5]], { name: 'd' });
+const board = JXG.JSXGraph.initBoard('jxgbox', { boundingbox: [-4, 6, 6, -4], axis: true });
+const a = board.create('slider', [[-3, 4.5], [0, 4.5], [-5, 1, 5]], { name: 'a' });
+const b = board.create('slider', [[-3, 3.5], [0, 3.5], [-5, 1, 5]], { name: 'b' });
+const c = board.create('slider', [[-3, 2.5], [0, 2.5], [-5, 0, 5]], { name: 'c' });
+const d = board.create('slider', [[-3, 1.5], [0, 1.5], [-5, 0, 5]], { name: 'd' });
 const base = (x) => 2 * x / (1 + x * x);
 const f = board.create('functiongraph', [(x) => base(x)], { strokeColor: 'black', dash: 1 });
 const tf = board.create('functiongraph', [(x) => a.Value() * base(b.Value() * x + c.Value()) + d.Value()]);
-const pt = board.create('glider', [0, 0, f], { fillColor: 'black', strokeColor: 'black' });
-const tpt = board.create('point', [() => (pt.X() - c.Value()) / b.Value(), () => a.Value() * pt.Y() + d.Value()], { fillColor: 'blue', strokeColor: 'blue' });
+const pt = board.create('glider', [0, 0, f], { fillColor: 'red', strokeColor: 'red', withLabel: false });
+const tpt = board.create('point', [() => (pt.X() - c.Value()) / b.Value(), () => a.Value() * pt.Y() + d.Value()], { fillColor: 'blue', strokeColor: 'blue', withLabel: false });

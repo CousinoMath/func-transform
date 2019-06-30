@@ -79,3 +79,18 @@ footer {
 small {
   font-size: smaller;
 }
+
+@media (min-width: 851px) {
+  /* line 17, ../src/style.scss */
+  .jxgbox {
+    width: 25em;
+    height: 25em;
+  }
+}
+@media (max-width: 850px) {
+  /* line 17, ../src/style.scss */
+  .jxgbox {
+    width: 99vw;
+    height: 99vw;
+  }
+}
