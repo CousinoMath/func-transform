@@ -5,6 +5,25 @@ h1 {
     text-align: center;
 }
 
+form {
+    display: table;
+}
+
+form div.input {
+    display: table-row;
+    vertical-align: middle;
+}
+
+form div.input * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+form div.input label {
+    text-align: right;
+    width: 3.5em;
+}
+
 footer {
     margin-top: 1ex;
     border-top: 1px black solid;
